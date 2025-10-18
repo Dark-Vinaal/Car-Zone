@@ -1,0 +1,38 @@
+/* Font */
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar,
+.navbar .navbar-brand,
+.navbar .navbar-brand *,
+.navbar .nav-link,
+.navbar .nav-link *,
+.navbar .navbar-text {
+    color: #fff !important;
+}
+
+.navbar {
+    background-color: #000 !important;
+}
+
+.navbar-brand,
+.navbar-brand * {
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.contact {
+    padding: 8px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border-radius: 50px;
+    border: 2px solid black;
+    color: black;
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
