@@ -1,9 +1,18 @@
 /* Global Background */
 body {
-    background-color: #f8f9fa;
-    /* light white background */
-    color: #0d0d0d;
+    /* background-color: #f8f9fa; */
+    /* color: #0d0d0d; */
     font-family: "Poppins", sans-serif;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+.line {
+    border-bottom: 2px solid #b30000;
 }
 
 /* Navbar Base */
@@ -130,6 +139,16 @@ body {
     letter-spacing: 5px;
     transition: all 0.4s ease;
 }
+
+@media (max-width: 500px) {
+    .allbrands {
+        font-size: 1.2rem;
+        /* You can tweak this value for preferred size */
+        letter-spacing: 2px;
+        margin: 30px 0 20px 0;
+    }
+}
+
 
 /* fade-in upward entrance */
 @keyframes fadeInUp {
@@ -270,4 +289,274 @@ body {
 .contact:active {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(179, 0, 0, 0.3);
+}
+
+/* Cards Arrange */
+/* Container ensures proper alignment & spacing */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center all cards horizontally */
+    gap: 24px;
+    /* Space between cards, adjust as needed */
+    padding: 24px;
+    /* Space on all sides */
+}
+
+/* Card base styling for uniformity */
+.card {
+    width: 18rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+    margin: 0 auto;
+    /* Center card within col */
+    border-radius: 12px;
+    overflow: hidden;
+    /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Responsive image that perfectly fits card width and height */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
+    /* Ensures image fills area & is cropped if needed */
+    object-position: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Optional: Uniform padding inside card body */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 8px;
+}
+
+.card-title {
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.explore.btn {
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* Container for cards */
+
+
+/* Each card column (adjusts for 4 per row) */
+.col-lg-3,
+.col-md-4,
+.col-12 {
+    flex: 0 0 22%;
+    /* Slightly less than 25% to allow gap */
+    max-width: 22%;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+
+/* Media queries for responsiveness (optional) */
+@media (max-width: 991px) {
+
+    .col-lg-3,
+    .col-md-4,
+    .col-12 {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        justify-content: center;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .col-lg-3,
+    .col-md-4,
+    .col-12 {
+        flex: 0 0 90%;
+        max-width: 90%;
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .row {
+        justify-content: center;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .col-lg-3,
+    .col-md-4,
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        /* Ensure card takes full width (with padding) */
+    }
+}
+
+/* About Section */
+.ban {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-bottom: 2px solid #b30000;
+}
+
+.about-title {
+    font-family: "Alex Brush", cursive;
+    font-size: 3rem;
+    color: #e50914;
+    margin-bottom: 10px;
+    animation: fadeDown 1.2s ease-out;
+}
+
+.about-title span {
+    color: #ff4d4d;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ccc;
+    animation: fadeUp 1.2s ease-out;
+}
+
+/* Main Content */
+.about-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.about-content h2 {
+    color: #e50914;
+    margin-top: 40px;
+    border-left: 4px solid #e50914;
+    padding-left: 12px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.about-content p,
+.about-content li {
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-content li {
+    background: rgba(179, 0, 0, 0.08);
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-left: 3px solid #e50914;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.about-content li:hover {
+    background: rgba(229, 9, 20, 0.15);
+    transform: translateX(6px);
+}
+
+/* Blockquote (quote style) */
+blockquote {
+    margin: 40px auto;
+    font-style: italic;
+    color: #ff4d4d;
+    border-left: 4px solid #b30000;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+blockquote:hover {
+    color: #fff;
+}
+
+/* Footer */
+.about-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #b30000;
+    color: #999;
+    background: #0b0b0b;
+    font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.3rem;
+    }
+
+    .about-content {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .about-content h2 {
+        font-size: 1.4rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+    }
 }
