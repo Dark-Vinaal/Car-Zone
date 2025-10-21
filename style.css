@@ -87,14 +87,72 @@ body {
     }
 }
 
+/* All Brands Heading */
 .allbrands {
-    font-weight: 600;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 25px;
-    color: black;
     font-family: "Poppins", sans-serif;
-    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #b30000;
+    background: linear-gradient(90deg, #800000, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 50px 0 30px 0;
+    position: relative;
+    animation: fadeInUp 1s ease-out, spacing 2s ease-out;
+}
+
+/* subtle underline that slides in */
+.allbrands::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff4d4d, #800000);
+    border-radius: 3px;
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+}
+
+/* when hovered, underline expands */
+.allbrands:hover::after {
+    width: 60%;
+}
+
+/* glow pulse on hover */
+.allbrands:hover {
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.4),
+        0 0 20px rgba(179, 0, 0, 0.3);
+    letter-spacing: 5px;
+    transition: all 0.4s ease;
+}
+
+/* fade-in upward entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* slight letter spacing animation */
+@keyframes spacing {
+    0% {
+        letter-spacing: 1px;
+    }
+
+    100% {
+        letter-spacing: 4px;
+    }
 }
 
 .card-title {
@@ -105,33 +163,82 @@ body {
     align-items: center;
 }
 
-.btn {
+/* Explore Button Styles */
+.explore {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 5px;
-    margin: 12px;
-    border-radius: 30px;
-    font-size: 1.1rem;
+    padding: 5px 25px;
+    font-size: 1rem;
     font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #b30000;
+    /* red text */
+    border: 2px solid #b30000;
+    border-radius: 30px;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.1);
 }
 
+/* Subtle glowing effect that expands when hovered */
+.explore::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 77, 77, 0.4), transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
 
+/* Border + glow pop-up animation */
+.explore:hover::before {
+    width: 250%;
+    height: 250%;
+    opacity: 1;
+}
+
+.explore:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #ff4d4d, #800000);
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(179, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.explore:active {
+    transform: scale(0.96);
+    box-shadow: 0 0 8px rgba(128, 0, 0, 0.4);
+}
+
+/* Contact Button Styles */
 .contact {
     position: relative;
     display: inline-block;
-    padding: 10px 34px;
+    padding: 5px 30px;
     font-size: 1.2rem;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     border-radius: 50px;
-    border: 2px solid #0cd4f3;
-    color: #0cd4f3;
+    border: 2px solid #b30000;
+    /* deep red border */
+    color: #b30000;
     background: transparent;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0 0 12px rgba(12, 212, 243, 0.2);
+    box-shadow: 0 0 12px rgba(179, 0, 0, 0.25);
+    /* subtle red glow */
     overflow: hidden;
     z-index: 1;
 }
@@ -143,7 +250,8 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #0cd4f3, #ff00ff);
+    background: linear-gradient(90deg, #ff4d4d, #800000);
+    /* light red → maroon */
     transition: all 0.4s ease-in-out;
     z-index: -1;
 }
@@ -156,10 +264,10 @@ body {
     color: #fff;
     border-color: transparent;
     transform: scale(1.07);
-    box-shadow: 0 0 20px rgba(12, 212, 243, 0.6), 0 0 40px rgba(255, 0, 255, 0.4);
+    box-shadow: 0 0 20px rgba(179, 0, 0, 0.5), 0 0 40px rgba(128, 0, 0, 0.4);
 }
 
 .contact:active {
     transform: scale(1.02);
-    box-shadow: 0 0 10px rgba(12, 212, 243, 0.3);
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.3);
 }
