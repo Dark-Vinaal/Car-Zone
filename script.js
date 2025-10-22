@@ -28,3 +28,14 @@ function resetLoop() {
     loopInterval = setInterval(nextSlide, 3500); // change every 3.5s
 }
 resetLoop();
+
+function showLeaveMessage(event) {
+  event.preventDefault(); // stop link default behavior
+  document.getElementById('end').innerHTML = `
+    <p>You are about to leave the site.</p>
+    <button onclick="history.go(-1);">Go Back</button>
+  `;
+  document.getElementById('end').scrollIntoView({behavior: 'smooth'});
+}
+
+

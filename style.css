@@ -432,19 +432,13 @@ body {
 }
 
 /* About Section */
-.ban {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-    border-bottom: 2px solid #b30000;
-}
-
 .about-title {
     font-family: "Alex Brush", cursive;
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #e50914;
     margin-bottom: 10px;
     animation: fadeDown 1.2s ease-out;
+    opacity: 0.7;
 }
 
 .about-title span {
@@ -452,12 +446,13 @@ body {
 }
 
 .about-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #ccc;
     animation: fadeUp 1.2s ease-out;
+    opacity: 0.5;
 }
 
 /* Main Content */
@@ -624,8 +619,9 @@ blockquote:hover {
     position: relative;
     width: 100vw;
     /* full width */
-    max-width: 100%;
-    height: 420px;
+
+    width: 100vw;
+    height: 520px;
     /* adjust for your images */
     display: flex;
     align-items: center;
@@ -633,6 +629,26 @@ blockquote:hover {
     overflow: hidden;
     background: #161616;
     /* dark background */
+}
+
+.hero-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures video covers the space, no black bars */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* makes sure video is below overlay content */
+}
+
+/* For overlaying text/buttons on the banner */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    /* add padding/margin as needed */
 }
 
 .slider {
@@ -696,10 +712,10 @@ blockquote:hover {
 }
 
 .social-icon i {
-  transition: transform 0.2s, color 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
 .social-icon:hover i {
-  transform: scale(1.15);
-  color: #b30000;
+    transform: scale(1.15);
+    color: #b30000;
 }

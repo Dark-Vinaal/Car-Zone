@@ -32,7 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0 gap-4 fs-6">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#cd">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="#hero">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">BRANDS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">ABOUT</a>
@@ -44,11 +47,13 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#cnt">CONTACT</a></li>
-                            <li><a class="dropdown-item" href="#srce">SOURCE</a></li>
+                            <li><a class="dropdown-item" href="#srce">FEEDBACKS</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#lv">LEAVE</a></li>
+                            <!-- <a class="dropdown-item" href="javascript:void(0)"
+                                onclick="showLeaveMessage(event)">LEAVE</a> -->
+                            <li><a class="dropdown-item" href="#" onclick="history.go(-1); return false;">LEAVE</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -59,7 +64,7 @@
     <div class="line"></div>
 
     <!-- Banners -->
-    <div class="hero-banner position-relative">
+    <div id="hero" class="hrtxt hero-banner position-relative">
         <header class="text-center w-100"
             style="position:absolute; left:50%; bottom:0; transform:translateX(-50%); z-index:2;">
             <h1 class="about-title"><span>Asphalt Velocity</span></h1>
@@ -70,35 +75,17 @@
 
         <button class="arrow left" style="z-index:3;">&lt;</button>
         <div class="slider w-100">
-            <video src="Assets/Lambo Hero 1.mp4" class="slide active" loop muted autoplay playsinline></video>
-            <img src="img2.jpg" class="slide">
-            <img src="img3.jpg" class="slide">
-            <img src="img4.jpg" class="slide">
-            <img src="img5.jpg" class="slide">
+            <video src="Assets/Lambo.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Pagani.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Koenigsegg.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Mclaren.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Bugatti.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Porsche.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/Ferrari.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <video src="Assets/BMW.mp4" class="slide active" loop muted autoplay playsinline></video>
         </div>
         <button class="arrow right" style="z-index:3;">&gt;</button>
     </div>
-
-
-    <!--    <header class="ban">
-        <h1 class="about-title"><span>Asphalt Velocity</span></h1>
-        <p class="about-subtitle">Where Power Meets Perfection</p>
-        <p class="about-subtitle">Explore the Fastest, Rarest, and Most Desirable Cars Ever Built</p>
-        <p class="about-subtitle">Feel the Roar, the Curves, the Craftsmanship</p>
-    </header>
-
-    <div class="hero-banner">
-        <button class="arrow left">&lt;</button>
-        <div class="slider">
-            <img src="" class="slide active">
-            <img src="" class="slide">
-            <img src="" class="slide">
-            <img src="" class="slide">
-            <img src="" class="slide">
-        </div>
-
-        <button class="arrow right">&gt;</button>
-    </div> -->
 
     <!-- Cards -->
     <section id="products" class="border-animate">
@@ -395,7 +382,11 @@
         </center>
     </section>
 
-    <div class=" line">
+    <div class=" line"></div>
+    <div id="end" class="end-section">
+        <h4 class="allbrands"> --- THANK YOU FOR VISITING! --- </h4>
+        <blockquote>We appreciate your time and interest in Asphalt Velocity. Drive safe and stay passionate about cars!
+        </blockquote>
     </div>
 
     <!-- Footer -->
@@ -408,5 +399,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>
