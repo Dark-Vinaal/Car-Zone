@@ -149,7 +149,6 @@ body {
     }
 }
 
-
 /* fade-in upward entrance */
 @keyframes fadeInUp {
     from {
@@ -173,6 +172,7 @@ body {
         letter-spacing: 4px;
     }
 }
+
 
 .card-title {
     font-weight: 700;
@@ -289,6 +289,17 @@ body {
 .contact:active {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(179, 0, 0, 0.3);
+}
+
+#cnt {
+    margin-top: 3px;
+    ;
+
+    border-radius: 0px;
+    border-top: 3px solid #b30000;
+    border-bottom: 3px solid #b30000;
+    border-left: 4px solid #b30000;
+    border-right: 4px solid #b30000;
 }
 
 /* Cards Arrange */
@@ -451,10 +462,12 @@ body {
 
 /* Main Content */
 .about-content {
-    max-width: 900px;
-    margin: 50px auto;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0 20px;
     text-align: left;
+    border: 15px solid transparent;
+    border-image: linear-gradient(90deg, #b30000, #ff9900, #b30000) 1;
 }
 
 .about-content h2 {
@@ -507,7 +520,7 @@ blockquote:hover {
 }
 
 /* Footer */
-.about-footer {
+.footer {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #b30000;
@@ -559,4 +572,134 @@ blockquote:hover {
     blockquote {
         font-size: 1rem;
     }
+}
+
+#products.border-animate {
+    position: relative;
+    border-radius: 18px;
+    padding: 28px;
+    /* Adjust padding as needed for your layout */
+    z-index: 1;
+    overflow: hidden;
+    /* Ensures the border stays at the corners */
+}
+
+/* Animated gradient border */
+#products.border-animate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* shorthand for top:0; right:0; bottom:0; left:0; */
+    border-radius: 18px;
+    padding: 0;
+    z-index: 1;
+    pointer-events: none;
+    border: 5px solid transparent;
+    background: linear-gradient(120deg, #b30000, #ff9900, #b30000, #ff4d4d, #b30000);
+    background-size: 300% 300%;
+    box-sizing: border-box;
+
+    /* Mask the background to only show within the border area */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: borderGradientMove 2.5s linear infinite;
+}
+
+/* Animate the gradient movement */
+@keyframes borderGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.hero-banner {
+    position: relative;
+    width: 100vw;
+    /* full width */
+    max-width: 100%;
+    height: 420px;
+    /* adjust for your images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #161616;
+    /* dark background */
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.slide {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    font-size: 2.4rem;
+    color: #fff;
+    background: rgba(179, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 0 14px #b30000;
+    transition: background 0.3s;
+}
+
+.arrow.left {
+    left: 16px;
+}
+
+.arrow.right {
+    right: 16px;
+}
+
+.arrow:hover {
+    background: #ff4d4d;
+    color: #161616;
+}
+
+.social-icon i {
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-icon:hover i {
+  transform: scale(1.15);
+  color: #b30000;
 }

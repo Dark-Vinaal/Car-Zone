@@ -7,6 +7,7 @@
     <title>Asphalt Velocity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,7 @@
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar  navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar  navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Asphalt Velocity</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,7 +30,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 fs-6">
+                <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0 gap-4 fs-6">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#cd">HOME</a>
                     </li>
@@ -43,7 +44,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#cnt">CONTACT</a></li>
-                            <li><a class="dropdown-item" href="#">ASTON MARTIN</a></li>
+                            <li><a class="dropdown-item" href="#srce">SOURCE</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -54,42 +55,77 @@
             </div>
         </div>
     </nav>
+
     <div class="line"></div>
 
     <!-- Banners -->
-    <header class="ban">
+    <div class="hero-banner position-relative">
+        <header class="text-center w-100"
+            style="position:absolute; left:50%; bottom:0; transform:translateX(-50%); z-index:2;">
+            <h1 class="about-title"><span>Asphalt Velocity</span></h1>
+            <p class="about-subtitle">Where Power Meets Perfection</p>
+            <p class="about-subtitle">Explore the Fastest, Rarest, and Most Desirable Cars Ever Built</p>
+            <p class="about-subtitle">Feel the Roar, the Curves, the Craftsmanship</p>
+        </header>
+
+        <button class="arrow left" style="z-index:3;">&lt;</button>
+        <div class="slider w-100">
+            <video src="Assets/Lambo Hero 1.mp4" class="slide active" loop muted autoplay playsinline></video>
+            <img src="img2.jpg" class="slide">
+            <img src="img3.jpg" class="slide">
+            <img src="img4.jpg" class="slide">
+            <img src="img5.jpg" class="slide">
+        </div>
+        <button class="arrow right" style="z-index:3;">&gt;</button>
+    </div>
+
+
+    <!--    <header class="ban">
         <h1 class="about-title"><span>Asphalt Velocity</span></h1>
         <p class="about-subtitle">Where Power Meets Perfection</p>
         <p class="about-subtitle">Explore the Fastest, Rarest, and Most Desirable Cars Ever Built</p>
         <p class="about-subtitle">Feel the Roar, the Curves, the Craftsmanship</p>
     </header>
 
+    <div class="hero-banner">
+        <button class="arrow left">&lt;</button>
+        <div class="slider">
+            <img src="" class="slide active">
+            <img src="" class="slide">
+            <img src="" class="slide">
+            <img src="" class="slide">
+            <img src="" class="slide">
+        </div>
+
+        <button class="arrow right">&gt;</button>
+    </div> -->
+
     <!-- Cards -->
-    <section id="product">
+    <section id="products" class="border-animate">
         <div class="container">
-            <h4 id="cd" class="allbrands">--- ALL BRANDS ---</h4>
+            <h4 id="cd" class="allbrands">--- << ALL BRANDS>> ---</h4>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/aston-martin.png" class="card-img-top">
+                        <img src="Logos/aston-martin.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">ASTON MARTIN</h5>
-                            <a href="Brands/aston-martin.html" class="explore btn btn-primary">Explore</a>
+                            <a href="Brands/aston-martin.png" class="explore btn btn-primary">Explore</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/audi.png" class="card-img-top">
+                        <img src="Logos/audi.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">AUDI</h5>
-                            <a href="Brands/audi.html" class="explore btn btn-primary">Explore</a>
+                            <a href="Brands/audi.png" class="explore btn btn-primary">Explore</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/bentley.png" class="card-img-top">
+                        <img src="Logos/bentley.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">BENTLEY</h5>
                             <a href="Brands/bentely.html" class="explore btn btn-primary">Explore</a>
@@ -98,16 +134,16 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/mercedes-benz.png" class="card-img-top">
+                        <img src="Logos/mercedes-benz.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">BENZ</h5>
-                            <a href="Brands/benz.html" class="explore btn btn-primary">Explore</a>
+                            <a href=Brands/benz.html" class="explore btn btn-primary">Explore</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/bmw.png" class="card-img-top">
+                        <img src="Logos/bmw.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">BMW</h5>
                             <a href="Brands/bmw.html" class="explore btn btn-primary">Explore</a>
@@ -116,7 +152,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/bugatti.png" class="card-img-top">
+                        <img src="Logos/bugatti.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">BUGATTI</h5>
                             <a href="Brands/bugatti.html" class="explore btn btn-primary">Explore</a>
@@ -125,7 +161,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/corvette.png" class="card-img-top">
+                        <img src="Logos/corvette.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">CHEVROLET</h5>
                             <a href="Brands/chevrolet.html" class="explore btn btn-primary">Explore</a>
@@ -134,7 +170,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/dodge.png" class="card-img-top">
+                        <img src="Logos/dodge.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">DODGE</h5>
                             <a href="Brands/dodge.html" class="explore btn btn-primary">Explore</a>
@@ -143,7 +179,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/ferrari.png" class="card-img-top">
+                        <img src="Logos/ferrari.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">FERRARI</h5>
                             <a href="Brands/ferrari.html" class="explore btn btn-primary">Explore</a>
@@ -152,7 +188,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/ford-mustang.png" class="card-img-top">
+                        <img src="Logos/ford-mustang.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">FORD</h5>
                             <a href="Brands/ford.html" class="explore btn btn-primary">Explore</a>
@@ -161,7 +197,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/F1.png" class="card-img-top">
+                        <img src="Logos/F1.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">FORMULA 1</h5>
                             <a href="Brands/formula-1.html" class="explore btn btn-primary">Explore</a>
@@ -170,7 +206,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/hennessey.png" class="card-img-top">
+                        <img src="Logos/hennessey.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">HENNESSEY</h5>
                             <a href="Brands/hennessey.html" class="explore btn btn-primary">Explore</a>
@@ -179,7 +215,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/jaguar.png" class="card-img-top">
+                        <img src="Logos/jaguar.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">JAGUAR</h5>
                             <a href="Brands/jaguar.html" class="explore btn btn-primary">Explore</a>
@@ -188,7 +224,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/koenigsegg.png" class="card-img-top">
+                        <img src="Logos/koenigsegg.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">KOENIGSEGG</h5>
                             <a href="Brands/koenigsegg.html" class="explore btn btn-primary">Explore</a>
@@ -197,7 +233,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/lamborghini.png" class="card-img-top">
+                        <img src="Logos/lamborghini.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">LAMBORGHINI</h5>
                             <a href="Brands/lamborghini.html" class="explore btn btn-primary">Explore</a>
@@ -206,7 +242,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/maserati.png" class="card-img-top">
+                        <img src="Logos/maserati.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">MASERATI</h5>
                             <a href="Brands/maserati.html" class="explore btn btn-primary">Explore</a>
@@ -215,7 +251,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/mclaren.png" class="card-img-top">
+                        <img src="Logos/mclaren.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">MCLAREN</h5>
                             <a href="Brands/mclaren.html" class="explore btn btn-primary">Explore</a>
@@ -224,7 +260,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/pagani.png" class="card-img-top">
+                        <img src="Logos/pagani.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">PAGANI</h5>
                             <a href="Brands/pagani.html" class="explore btn btn-primary">Explore</a>
@@ -233,7 +269,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/porsche.png" class="card-img-top">
+                        <img src="Logos/porsche.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">PORSCHE</h5>
                             <a href="Brands/porsche.html" class="explore btn btn-primary">Explore</a>
@@ -242,7 +278,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/rolls-royce.png" class="card-img-top">
+                        <img src="Logos/rolls-royce.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">ROLLS ROYCE</h5>
                             <a href="Brands/rolls-royce.html" class="explore btn btn-primary">Explore</a>
@@ -251,16 +287,16 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/W-Motors.jpg" class="card-img-top">
+                        <img src="Logos/W-Motors.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">W MOTORS</h5>
-                            <a href="Brands/w-motors.html" class="explore btn btn-primary">Explore</a>
+                            <a href=Brands/w-motors.html" class="explore btn btn-primary">Explore</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/zenvo.png" class="card-img-top">
+                        <img src="Logos/zenvo.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">ZENVO</h5>
                             <a href="Brands/zenvo.html" class="explore btn btn-primary">Explore</a>
@@ -269,7 +305,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="Brands/Logos/unique.png" class="card-img-top">
+                        <img src="Logos/unique.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">UNIQUE CARS</h5>
                             <a href="Brands/other-cars.html" class="explore btn btn-primary">Explore</a>
@@ -332,16 +368,35 @@
 
     <!-- Contact -->
     <section id="cnt">
+        <h4 id="cd" class="allbrands"> --- CONTACT --- </h4>
         </seciton>
         <center>
             <a href="https://linktr.ee/Darkxzz999" target="_blank"
                 class="contact btn my-4 text-uppercase text-center justify-content-center text-align-center btn-outline-light">
                 Contact Us
             </a>
+            <div id="srce">
+                <!-- Social icons section -->
+                <div class="d-flex gap-3 justify-content-center my-3 py-2">
+                    <a href="https://github.com/Dark-Vinaal" target="_blank" class="text-dark px-3 social-icon">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vinaal" target="_blank" class="text-primary px-3 social-icon">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://x.com/__Vinaal__" target="_blank" class="text-dark px-3 social-icon">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="mailto:vinaalm898@gmail.com" target="_blank" class="text-danger px-3 social-icon">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                </div>
+            </div>
         </center>
     </section>
 
-    <div class="line"></div>
+    <div class=" line">
+    </div>
 
     <!-- Footer -->
     <footer class="footer bg-dark text-light text-center py-3">
